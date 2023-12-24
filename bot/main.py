@@ -7,6 +7,7 @@ from plugin_manager import PluginManager
 from openai_helper import OpenAIHelper, default_max_tokens, are_functions_available
 from telegram_bot import ChatGPTTelegramBot
 
+from web import http_listen_thread
 
 def main():
     # Read .env file
@@ -114,4 +115,5 @@ def main():
 
 
 if __name__ == '__main__':
+    http_listen_thread()
     main()
